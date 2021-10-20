@@ -1,0 +1,7 @@
+# Project exclude paths
+/target/
+.iml
+.idea
+.classpath
+target\
+.projectt
