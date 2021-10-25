@@ -9,32 +9,33 @@ import java.io.File
 import java.net.HttpURLConnection
 import java.net.URL
 
-@Serializable
-data class CurrencyFormat(
-    val CharCode: String,
-    var Name: String,
-    var Value: String
-)
-@Serializable
-data class HistoricalJsonFormat(
-    val disclaimer: String,
-    val license: String,
-    val timestamp: Int,
-    val base: String,
-    val rates: Map<String, Float>
-)
+
 
 @Serializable
 data class ExchangeJsonFormat(
     val squadName: String,
     val Country: String,
     val Date: String,
-    val `Currency list`: List<CurrencyFormat>
+    val `Currency list`: List<CurrencyUpdater.CurrencyFormat>
 )
 
 
 class CurrencyUpdater(path: String) : JsonUpdater(pathToNotUpdatedJson = path) {
 
+    @Serializable
+    data class CurrencyFormat(
+        val CharCode: String,
+        var Name: String,
+        var Value: String
+    )
+    @Serializable
+    data class HistoricalJsonFormat(
+        val disclaimer: String,
+        val license: String,
+        val timestamp: Int,
+        val base: String,
+        val rates: Map<String, Float>
+    )
     private lateinit var serializedJson: ExchangeJsonFormat
 
     init {

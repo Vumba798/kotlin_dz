@@ -23,10 +23,9 @@ class WeatherUpdater(path: String): JsonUpdater(pathToNotUpdatedJson = path){
         var `Temperature Fahrenheit`: String
     )
 
-    private var serializedJson: WeatherJsonFormat
+    private var serializedJson: WeatherJsonFormat = format.decodeFromString(jsonNotUpdatedString)
 
     init {
-        serializedJson = format.decodeFromString(jsonNotUpdatedString)
         updateJson()
     }
 

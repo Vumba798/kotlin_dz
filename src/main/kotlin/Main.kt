@@ -25,4 +25,14 @@ fun main() {
     } catch(exception: FileNotFoundException){
         println("WeatherUpdater init error: " + exception.message)
     }
+
+    println("//////////////////////////////////////////////////////////")
+    try {
+        val json = ExchangeAndWeatherUnion("DZ 2.json", "DZ.json")
+        println(json.getJsonString())
+        println(format.encodeToString(json.getForecast("Moscow")))
+        println(format.encodeToString(json.getExchange("USD")))
+    }catch(exception: Exception) {
+        println(exception.message)
+    }
 }
