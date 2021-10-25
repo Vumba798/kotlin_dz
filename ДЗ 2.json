@@ -1,0 +1,26 @@
+{
+  "squadName": "List of cities",
+  "Date": "2021/10/21",
+  "Currency list": [
+    {
+      "City": "Moscow",
+      "Temperature Celsius": "",
+      "Temperature Fahrenheit": ""
+    },
+    {
+      "City": "Los-angeles",
+      "Temperature Celsius": "",
+      "Temperature Fahrenheit": ""
+    },
+    {
+      "City": "Tokyo",
+      "Temperature Celsius": "",
+      "Temperature Fahrenheit": ""
+    },
+    {
+      "City": "Paris",
+      "Temperature Celsius": "",
+      "Temperature Fahrenheit": ""
+    }
+  ]
+}
